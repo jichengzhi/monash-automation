@@ -4,6 +4,7 @@ import './style.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Root from "./routes/Root.tsx";
 import ErrorPage from "./routes/ErrorPage.tsx";
+import Home from "./routes/Home.tsx";
 
 const router = createBrowserRouter([
     {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <h1>Home Page</h1>
+                element: <Home/>
             },
             {
                 path: "about-us",
