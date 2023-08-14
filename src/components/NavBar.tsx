@@ -2,6 +2,7 @@ import {Link, NavLink} from "react-router-dom";
 import {useState} from "react";
 import {FiMenu, FiMoon, FiSun} from "react-icons/fi";
 import {twJoin} from "tailwind-merge";
+import {cva} from "class-variance-authority";
 
 type Route = {
     name: string
@@ -39,16 +40,30 @@ const routes: Route[] = [
     },
 ];
 
-function Menu({closeMenu}: {closeMenu: () => void}) {
+function Menu({closeMenu}: { closeMenu: () => void }) {
+
+    const navLink = cva(['w-full', 'py-2'], {
+        variants: {
+            text: {
+                active: ['text-[#006DAE]', 'dark:text-[#006DAE]'],
+                inactive: ['text-black', 'dark:text-white']
+            },
+            bg: {
+                active: ['bg-gray-200', 'dark:bg-gray-700'],
+                inactive: ['hover:bg-gray-200', 'dark:hover:bg-gray-700']
+            }
+        }
+    });
+
     return (
         <div className='h-full max-h-screen overflow-y-scroll no-bg-scrollbar bg-white dark:bg-[#23272f]'>
             <div className='py-10 h-full w-full flex flex-col gap-3'>
                 {routes.map(route => (
                     <NavLink to={route.href} key={route.name}
-                             className={({isActive}) => twJoin('w-full py-2',
-                                 isActive
-                                     ? 'text-[#006DAE] dark:text-[#006DAE] bg-gray-200 dark:bg-gray-700'
-                                     : 'text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700')}
+                             className={({isActive}) => navLink({
+                                 text: isActive ? 'active' : 'inactive',
+                                 bg: isActive ? 'active' : 'inactive'
+                             })}
                              onClick={closeMenu}>
                         <span className='font-medium px-10 dark:text-white'>{route.name}</span>
                     </NavLink>
@@ -66,7 +81,7 @@ function MonashAutomationLogo({theme, className = ''}: { theme: 'dark' | 'light'
 }
 
 // TODO: gray background #f3f4f6 monash blue #006DAE
-export default function NavBar({theme, toggleTheme}: {theme: 'dark' | 'light', toggleTheme: () => void}) {
+export default function NavBar({theme, toggleTheme}: { theme: 'dark' | 'light', toggleTheme: () => void }) {
 
     const [showMenu, setShowMenu] = useState(false);
 
