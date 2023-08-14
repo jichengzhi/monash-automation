@@ -31,7 +31,12 @@ export default function Root() {
     }
 
     return <>
-        <NavBar theme={theme} toggleTheme={toggleTheme}/>
-        <Outlet/>
+        <div className='bg-white dark:bg-[#23272f] text-black dark:text-white'>
+            <NavBar theme={theme} toggleTheme={toggleTheme}/>
+
+            <div className='max-h-screen overflow-y-scroll'>
+                <Outlet/>
+            </div>
+        </div>
     </>;
 }

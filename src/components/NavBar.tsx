@@ -3,6 +3,7 @@ import {useState} from "react";
 import {FiMenu, FiMoon, FiSun} from "react-icons/fi";
 import {twJoin} from "tailwind-merge";
 import {cva} from "class-variance-authority";
+import Logo from "./Logo.tsx";
 
 type Route = {
     name: string
@@ -73,13 +74,6 @@ function Menu({closeMenu}: { closeMenu: () => void }) {
     );
 }
 
-function MonashAutomationLogo({theme, className = ''}: { theme: 'dark' | 'light', className: string }) {
-    const url = theme === 'dark' ? '/ma-logo-lettermark-white-blue.png' : '/ma-logo-lettermark-black-blue.png';
-    return (
-        <img src={url} alt='Monash Automation Logo' className={className}/>
-    );
-}
-
 // TODO: gray background #f3f4f6 monash blue #006DAE
 export default function NavBar({theme, toggleTheme}: { theme: 'dark' | 'light', toggleTheme: () => void }) {
 
@@ -110,7 +104,7 @@ export default function NavBar({theme, toggleTheme}: { theme: 'dark' | 'light', 
                     </button>
 
                     <Link to='/' className='flex flex-row justify-center items-center gap-5'>
-                        <MonashAutomationLogo theme={theme} className='h-8 w-8'/>
+                        <Logo theme={theme} className='h-8 w-8'/>
                         <span className='font-medium dark:text-white'>Monash Automation</span>
                     </Link>
 
