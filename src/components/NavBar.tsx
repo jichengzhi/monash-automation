@@ -91,10 +91,10 @@ export default function NavBar({theme, toggleTheme}: { theme: 'dark' | 'light', 
 
 
     return (
-        <div className={twJoin('sticky top-0 bg-gray-50',
+        <div className={twJoin('sticky top-0',
             showMenu ? 'h-screen z-50' : 'z-20'
         )}>
-            <nav className='flex flex-row justify-between items-center py-2 px-5 dark:bg-[#23272f]'>
+            <nav className='flex flex-row justify-between items-center py-2 px-5 bg-white dark:bg-[#23272f] border border-b-gray-200'>
 
                 <div className='flex flex-row justify-center items-center gap-5'>
                     <button
