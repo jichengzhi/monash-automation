@@ -1,42 +1,31 @@
+import {useEffect, useState} from "react";
 import {Outlet} from "react-router-dom";
 import NavBar from "../components/NavBar.tsx";
-import {useState} from "react";
-
-
-type Theme = 'dark' | 'light';
-
-function themeName(isDark: boolean): Theme {
-    return isDark ? 'dark' : 'light';
-}
-
-function initialTheme(): Theme {
-    if ('theme' in localStorage) {
-        return themeName(localStorage.theme === 'dark');
-    }
-    return themeName(window.matchMedia('(prefers-color-scheme: dark)').matches);
-}
+import {ThemeContext} from "../components/ThemeContext.ts";
+import {loadThemeFromLocalStorage, oppositeTheme, Theme} from "../lib/theme.ts";
 
 export default function Root() {
 
-    const [theme, setTheme] = useState<Theme>(initialTheme());
+    const [theme, setTheme] = useState<Theme>(loadThemeFromLocalStorage());
 
-    function toggleTheme() {
-        const newTheme = themeName(theme !== 'dark');
-        setTheme(newTheme);
-        // TODO: side effects in pure function
-        localStorage.setItem('theme', newTheme);
+    useEffect(() => {
         const root = window.document.documentElement;
-        root.classList.remove(theme);
-        root.classList.add(newTheme);
-    }
+        root.classList.remove(oppositeTheme(theme));
+        root.classList.add(theme);
+
+        localStorage.setItem('theme', theme);
+    }, [theme]);
 
     return <>
-        <div className='bg-white dark:bg-[#23272f] text-black dark:text-white'>
-            <NavBar theme={theme} toggleTheme={toggleTheme}/>
+        <ThemeContext.Provider value={{theme: theme, toggleTheme: () => setTheme(oppositeTheme(theme))}}>
+            <main className='bg-white dark:bg-[#23272f] text-black dark:text-white'>
+                <NavBar/>
 
-            <div className='max-h-screen overflow-y-scroll'>
-                <Outlet/>
-            </div>
-        </div>
+                <div className='max-h-screen overflow-y-scroll'>
+                    <Outlet/>
+                </div>
+            </main>
+        </ThemeContext.Provider>
+
     </>;
 }

@@ -1,9 +1,10 @@
 import {Link, NavLink} from "react-router-dom";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import {FiMenu, FiMoon, FiSun} from "react-icons/fi";
 import {twJoin} from "tailwind-merge";
 import {cva} from "class-variance-authority";
 import Logo from "./Logo.tsx";
+import {ThemeContext} from "./ThemeContext.ts";
 
 type Route = {
     name: string
@@ -75,9 +76,11 @@ function Menu({closeMenu}: { closeMenu: () => void }) {
 }
 
 // TODO: gray background #f3f4f6 monash blue #006DAE
-export default function NavBar({theme, toggleTheme}: { theme: 'dark' | 'light', toggleTheme: () => void }) {
+export default function NavBar() {
 
     const [showMenu, setShowMenu] = useState(false);
+
+    const {theme, toggleTheme} = useContext(ThemeContext);
 
     function ThemeSwitch() {
         return (
@@ -94,7 +97,8 @@ export default function NavBar({theme, toggleTheme}: { theme: 'dark' | 'light', 
         <div className={twJoin('sticky top-0',
             showMenu ? 'h-screen z-50' : 'z-20'
         )}>
-            <nav className='flex flex-row justify-between items-center py-2 px-5 bg-white dark:bg-[#23272f] border border-b-gray-200'>
+            <nav
+                className='flex flex-row justify-between items-center py-2 px-5 bg-white dark:bg-[#23272f] border border-b-gray-200'>
 
                 <div className='flex flex-row justify-center items-center gap-5'>
                     <button
@@ -104,7 +108,7 @@ export default function NavBar({theme, toggleTheme}: { theme: 'dark' | 'light', 
                     </button>
 
                     <Link to='/' className='flex flex-row justify-center items-center gap-5'>
-                        <Logo theme={theme} className='h-8 w-8'/>
+                        <Logo className='h-8 w-8'/>
                         <span className='font-medium dark:text-white'>Monash Automation</span>
                     </Link>
 

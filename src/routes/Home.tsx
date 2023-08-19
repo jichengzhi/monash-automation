@@ -4,7 +4,7 @@ import {BsRobot} from "react-icons/bs";
 export default function Home() {
     return <>
         <section className='h-1/2 py-16 px-4  flex flex-col justify-center items-center'>
-            <Logo theme={'dark'} className='h-32'/>
+            <Logo className='h-32'/>
 
             <p className='text-5xl font-semibold leading-snug text-center pt-12'>Monash Automation</p>
             <p className='text-3xl text-center pt-2'>Discover endless possibilities of AI and robots</p>
