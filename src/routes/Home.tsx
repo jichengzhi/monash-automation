@@ -11,11 +11,11 @@ export default function Home() {
 
             <div className='w-full py-8 flex flex-col md:flex-row justify-center items-stretch gap-2'>
                 <button
-                    className='text-lg py-3 px-5 rounded-3xl font-medium dark:text-white bg-gray-200 hover:bg-opacity-80 dark:hover:bg-gray-700'>Current
+                    className='text-lg py-2 px-5 rounded-3xl font-medium text-white dark:text-white bg-monash-blue dark:bg-monash-blue hover:bg-opacity-80 dark:hover:bg-opacity-80'>Current
                     Projects
                 </button>
                 <button
-                    className='text-lg py-3 px-5 rounded-3xl font-medium dark:text-white bg-gray-200 hover:bg-opacity-80 dark:hover:bg-gray-700 shadow-gray-200'>Join
+                    className='text-lg py-2 px-5 rounded-3xl font-medium dark:text-white bg-gray-200 dark:bg-gray-700 hover:bg-opacity-80 dark:hover:bg-opacity-80 shadow-gray-200'>Join
                     Us
                 </button>
             </div>
@@ -29,9 +29,9 @@ export default function Home() {
                     <BsRobot className='text-5xl'/>
                     <h1 className='text-4xl text-black dark:text-white font-bold'>Title</h1>
                     <p className='text-xl text-gray-600 dark:text-slate-300 pt-6'>
-                        Laboris sint tempor laborum consequat Lorem id excepteur aliqua nisi anim dolore ut. Pariatur mollit
-                        excepteur ipsum. Tempor esse in dolore minim voluptate aliquip dolor laborum incididunt sit culpa.Laboris sint tempor laborum consequat Lorem id excepteur aliqua nisi anim dolore ut. Pariatur mollit
-                        excepteur ipsum. Tempor esse in dolore minim voluptate aliquip dolor laborum incididunt sit culpa.
+                        Monash Automation is a student engineering team from Monash University, specialising in
+                        robotics, manufacturing, automation, artificial intelligence and research. The team operates
+                        from the Digital Twin Manufacturing Lab.
                     </p>
                 </article>
 
@@ -48,9 +48,13 @@ export default function Home() {
                     <BsRobot className='text-5xl'/>
                     <h1 className='text-4xl text-black dark:text-white font-bold'>Title</h1>
                     <p className='text-xl text-gray-600 dark:text-slate-300 pt-6'>
-                        Laboris sint tempor laborum consequat Lorem id excepteur aliqua nisi anim dolore ut. Pariatur mollit
-                        excepteur ipsum. Tempor esse in dolore minim voluptate aliquip dolor laborum incididunt sit culpa.Laboris sint tempor laborum consequat Lorem id excepteur aliqua nisi anim dolore ut. Pariatur mollit
-                        excepteur ipsum. Tempor esse in dolore minim voluptate aliquip dolor laborum incididunt sit culpa.
+                        Laboris sint tempor laborum consequat Lorem id excepteur aliqua nisi anim dolore ut. Pariatur
+                        mollit
+                        excepteur ipsum. Tempor esse in dolore minim voluptate aliquip dolor laborum incididunt sit
+                        culpa.Laboris sint tempor laborum consequat Lorem id excepteur aliqua nisi anim dolore ut.
+                        Pariatur mollit
+                        excepteur ipsum. Tempor esse in dolore minim voluptate aliquip dolor laborum incididunt sit
+                        culpa.
                     </p>
                 </article>
 
@@ -67,9 +71,13 @@ export default function Home() {
                     <BsRobot className='text-5xl'/>
                     <h1 className='text-4xl text-black dark:text-white font-bold'>Title</h1>
                     <p className='text-xl text-gray-600 dark:text-slate-300 pt-6'>
-                        Laboris sint tempor laborum consequat Lorem id excepteur aliqua nisi anim dolore ut. Pariatur mollit
-                        excepteur ipsum. Tempor esse in dolore minim voluptate aliquip dolor laborum incididunt sit culpa.Laboris sint tempor laborum consequat Lorem id excepteur aliqua nisi anim dolore ut. Pariatur mollit
-                        excepteur ipsum. Tempor esse in dolore minim voluptate aliquip dolor laborum incididunt sit culpa.
+                        Laboris sint tempor laborum consequat Lorem id excepteur aliqua nisi anim dolore ut. Pariatur
+                        mollit
+                        excepteur ipsum. Tempor esse in dolore minim voluptate aliquip dolor laborum incididunt sit
+                        culpa.Laboris sint tempor laborum consequat Lorem id excepteur aliqua nisi anim dolore ut.
+                        Pariatur mollit
+                        excepteur ipsum. Tempor esse in dolore minim voluptate aliquip dolor laborum incididunt sit
+                        culpa.
                     </p>
                 </article>
 

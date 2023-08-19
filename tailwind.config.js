@@ -6,7 +6,11 @@ export default {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'monash-blue': '#006DAE'
+      }
+    },
   },
   plugins: [],
 }
