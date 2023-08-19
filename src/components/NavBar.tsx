@@ -98,7 +98,7 @@ export default function NavBar() {
             showMenu ? 'h-screen z-50' : 'z-20'
         )}>
             <nav
-                className='flex flex-row justify-between items-center py-2 px-5 bg-white dark:bg-[#23272f] border border-b-gray-200'>
+                className='flex flex-row justify-between items-center py-2 px-5 bg-white dark:bg-[#23272f] border-b-2 border-b-gray-200 dark:border-b-gray-700'>
 
                 <div className='flex flex-row justify-center items-center gap-5'>
                     <button
