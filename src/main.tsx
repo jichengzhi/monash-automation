@@ -5,6 +5,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Root from "./routes/Root.tsx";
 import ErrorPage from "./routes/ErrorPage.tsx";
 import Home from "./routes/Home.tsx";
+import Teams from "./routes/Teams.tsx";
 
 const router = createBrowserRouter([
     {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "teams",
-                element: <h1>Teams Page</h1>
+                element: <Teams/>
             },
             {
                 path: "recruitment",
