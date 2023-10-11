@@ -1,4 +1,19 @@
-# Monash Automation Home
+# Monash Automation Official Page
+
+## Run in a container
+
+```shell
+docker build -t ma-home .
+```
+
+```shell
+docker run \
+    -it \
+    --name monash-automation \
+    --rm \
+    -p 4173:4173 \
+    ma-home
+```
 
 ## Dependencies
 
