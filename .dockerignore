@@ -1,5 +1,7 @@
 node_modules
 build
+coredns
+dist
 .dockerignore
 Dockerfile
 Dockerfile.prod
