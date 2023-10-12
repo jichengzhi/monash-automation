@@ -1,11 +1,11 @@
-$ORIGIN dtl.monash.edu.
+$ORIGIN msm.monash.edu.
 $TTL 1h
-@                 IN  SOA     ns.dtl.monash.edu. admin.dtl.monash.edu. (
+@                 IN  SOA     ns.msm.monash.edu. admin.msm.monash.edu. (
                                2020010510     ; Serial
                                1d             ; Refresh
                                2h             ; Retry
                                4w             ; Expire
                                1h)            ; Minimum TTL
 @                 IN  A       172.32.1.53; pi armdog2
-@                 IN  NS      ns.dtl.monash.edu.
+@                 IN  NS      ns.msm.monash.edu.
 ns                IN  CNAME   @
