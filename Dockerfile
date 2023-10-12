@@ -1,9 +1,11 @@
-FROM node:20-alpine
+FROM node
 
-RUN npm install -g serve
+WORKDIR /app
 
-WORKDIR /
+COPY package*.json .
 
-COPY dist /build
+RUN npm install
 
-CMD ["serve", "-l", "4173", "/build"]
+COPY . .
+
+CMD ["npm", "run", "preview"]
