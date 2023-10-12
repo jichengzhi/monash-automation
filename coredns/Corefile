@@ -4,7 +4,7 @@
     errors
 }
 
-dtl.monash.edu:53 {
+msm.monash.edu:53 {
     file /root/dtl.db
     log
     errors
