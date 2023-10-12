@@ -1,11 +1,11 @@
 .:53 {
-    forward . 172.32.1.251 8.8.8.8
+    forward . 172.32.1.251
     log
     errors
 }
 
 msm.monash.edu:53 {
-    file /root/dtl.db
+    file /root/msm.db
     log
     errors
 }

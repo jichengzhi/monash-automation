@@ -8,7 +8,7 @@ docker build -t ma-home .
 
 ```shell
 docker run -d --restart=always \
-    --name monash-automation \
+    --name ma-home \
     -p 4173:4173 \
     ma-home
 ```
