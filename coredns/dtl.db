@@ -6,6 +6,6 @@ $TTL 1h
                                2h             ; Retry
                                4w             ; Expire
                                1h)            ; Minimum TTL
-@                 IN  A       172.32.1.87
+@                 IN  A       172.32.1.25; pi
 @                 IN  NS      ns.dtl.monash.edu.
 ns                IN  CNAME   @
